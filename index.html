@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Dash Ultimate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <div id="hud" style="display: none;">
+            <div class="top-bar">
+                <div id="progress-container">
+                    <div id="progress-fill"></div>
+                </div>
+                <div id="mode-display">MODE: CUBE</div>
+                <div id="attempt-display">ATTEMPT <span id="attempt-count">1</span></div>
+            </div>
+            <button id="menu-btn" onclick="exitToMenu()">MENU</button>
+        </div>
+
+        <div id="main-menu">
+            <h1 class="logo">GEOMETRY DASH</h1>
+            <div class="level-select">
+                <button class="lvl-btn" onclick="startLevel(0)">
+                    <span class="lvl-name">STEREO MADNESS</span>
+                    <span class="lvl-diff" style="color:#00ff00">EASY</span>
+                </button>
+                <button class="lvl-btn" onclick="startLevel(1)">
+                    <span class="lvl-name">BACK ON TRACK</span>
+                    <span class="lvl-diff" style="color:#ffff00">NORMAL</span>
+                </button>
+                <button class="lvl-btn" onclick="startLevel(2)">
+                    <span class="lvl-name">POLARGEIST</span>
+                    <span class="lvl-diff" style="color:#ffaa00">HARD</span>
+                </button>
+                <button class="lvl-btn" onclick="startLevel(3)">
+                    <span class="lvl-name">DRY OUT</span>
+                    <span class="lvl-diff" style="color:#ff0000">HARDER</span>
+                </button>
+            </div>
+            <p style="color: #666; margin-top: 20px; font-size: 12px;">Space/Click to Jump • Hold for Ship/Wave/Robot</p>
+        </div>
+
+        <div id="crash-flash"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
